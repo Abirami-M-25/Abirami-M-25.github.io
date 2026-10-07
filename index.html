@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abirami M | Data Analyst Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f7f9fc;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 8%;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .hero h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #172554;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #172554;
+            margin-bottom: 35px;
+            font-size: 32px;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .project h3 {
+            color: #172554;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #555;
+        }
+
+        .education {
+            text-align: center;
+            background: white;
+            max-width: 800px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #172554;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0f172a;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h3 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>Abirami M</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+        <div>
+            <h1>Hi, I'm Abirami M</h1>
+
+            <h3>Aspiring Data Analyst</h3>
+
+            <p>
+                I am an aspiring Data Analyst with an interest in Python, SQL,
+                Excel, Power BI and Data Analytics. I enjoy working with data,
+                solving problems and finding meaningful insights from datasets.
+            </p>
+
+            <a class="button" href="#projects">View My Projects</a>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about">
+            <p>
+                I am an Electronics and Communication Engineering graduate
+                interested in building my career in Data Analytics and Data Science.
+                I have developed practical skills in Python, SQL, Excel and Power BI
+                through hands-on learning and projects.
+            </p>
+
+            <br>
+
+            <p>
+                I am currently developing my knowledge in Data Science and
+                Generative AI and looking for opportunities where I can apply
+                my analytical and problem-solving skills.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Excel</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Pandas</div>
+            <div class="skill">Data Analysis</div>
+            <div class="skill">Data Visualization</div>
+            <div class="skill">MySQL</div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Food Delivery Data Analysis</h3>
+
+                <p>
+                    Analyzed food delivery data using Python and Pandas to
+                    identify order trends, delivery patterns and business
+                    insights. Worked with data cleaning, analysis and
+                    visualization to understand delivery performance.
+                </p>
+            </div>
+
+
+            <div class="project">
+                <h3>Mobile Recharge Billing System</h3>
+
+                <p>
+                    Developed a Python-based recharge billing system using
+                    Object-Oriented Programming. The project includes mobile
+                    number validation, SIM selection, recharge plan selection,
+                    GST calculation and automated bill generation.
+                </p>
+            </div>
+
+
+            <div class="project">
+                <h3>Python Quiz Application</h3>
+
+                <p>
+                    Created a simple Python-based quiz application to practice
+                    programming concepts such as variables, conditions,
+                    loops, functions and user input.
+                </p>
+            </div>
+
+
+            <div class="project">
+                <h3>Power BI Data Analysis</h3>
+
+                <p>
+                    Developed an interactive Power BI dashboard using a
+                    business dataset to analyze important metrics, trends
+                    and performance indicators through data visualization.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="education">
+            <h3>Electronics and Communication Engineering</h3>
+
+            <p>
+                SRM TRP Engineering College
+            </p>
+
+            <p>
+                Graduate
+            </p>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+
+        <p>
+            I am actively looking for opportunities in Data Analytics,
+            Data Science and related roles.
+        </p>
+
+        <br>
+
+        <p>
+            Email:
+            <a href="mailto:abirami25112004@gmail.com">
+                abirami25112004@gmail.com
+            </a>
+        </p>
+
+        <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/abirami-murugan-8355b6323/"
+               target="_blank">
+                View my LinkedIn
+            </a>
+        </p>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Abirami M | Data Analyst Portfolio</p>
+    </footer>
+
+</body>
+</html>
