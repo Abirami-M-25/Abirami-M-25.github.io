@@ -13,6 +13,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
             scroll-behavior: smooth;
         }
 
@@ -54,12 +57,12 @@
             color: white;
             text-decoration: none;
             font-size: 15px;
+            cursor: pointer;
         }
 
         nav ul li a:hover {
             color: #c7d2fe;
         }
-
 
         /* HOME */
 
@@ -71,6 +74,7 @@
             text-align: center;
             padding: 60px 8%;
             background: white;
+            scroll-margin-top: 90px;
         }
 
         .hero-content {
@@ -111,11 +115,11 @@
             background: #263b80;
         }
 
-
         /* SECTIONS */
 
         section {
             padding: 75px 8%;
+            scroll-margin-top: 90px;
         }
 
         section h2 {
@@ -124,7 +128,6 @@
             margin-bottom: 40px;
             font-size: 32px;
         }
-
 
         /* ABOUT */
 
@@ -135,7 +138,6 @@
             color: #555;
             font-size: 17px;
         }
-
 
         /* SKILLS */
 
@@ -157,7 +159,6 @@
             font-weight: bold;
             color: #172554;
         }
-
 
         /* PROJECTS */
 
@@ -227,7 +228,6 @@
             border-radius: 20px;
         }
 
-
         /* EDUCATION */
 
         .education {
@@ -248,7 +248,6 @@
         .education p {
             color: #555;
         }
-
 
         /* CONTACT */
 
@@ -276,7 +275,6 @@
             text-decoration: underline;
         }
 
-
         /* FOOTER */
 
         footer {
@@ -286,7 +284,6 @@
             color: white;
             font-size: 14px;
         }
-
 
         /* MOBILE */
 
@@ -327,9 +324,7 @@
     </style>
 </head>
 
-
 <body>
-
 
     <!-- NAVIGATION -->
 
@@ -371,8 +366,6 @@
 
     </header>
 
-
-
     <!-- HOME -->
 
     <section class="hero" id="home">
@@ -394,4 +387,279 @@
                 Explore My Projects
             </a>
 
-        </
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                I am an Electronics and Communication Engineering
+                graduate interested in building my career in
+                Data Analytics and Data Science.
+            </p>
+
+            <br>
+
+            <p>
+                I have developed practical skills in Python, SQL,
+                Excel and Power BI through hands-on learning and
+                projects. I am currently developing my knowledge
+                in Data Science and Generative AI.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy analyzing data, learning new technologies
+                and using data-driven approaches to solve problems.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Excel</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Pandas</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Data Analysis</div>
+            <div class="skill">Data Visualization</div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2>Featured Projects</h2>
+
+        <div class="projects">
+
+            <!-- FOOD DELIVERY -->
+
+            <div class="project">
+
+                <span class="project-tag">
+                    Python • Pandas
+                </span>
+
+                <h3>
+                    Food Delivery Data Analysis
+                </h3>
+
+                <p>
+                    An ongoing data analysis project using Python
+                    and Pandas to explore food delivery orders,
+                    delivery performance, ratings and order trends.
+                </p>
+
+                <div class="project-points">
+
+                    <p>✓ Data cleaning and preprocessing</p>
+
+                    <p>✓ Order and delivery trend analysis</p>
+
+                    <p>✓ Identifying meaningful data insights</p>
+
+                </div>
+
+                <span class="status">
+                    Currently in Progress
+                </span>
+
+            </div>
+
+            <!-- MOBILE RECHARGE -->
+
+            <div class="project">
+
+                <span class="project-tag">
+                    Python • OOP
+                </span>
+
+                <h3>
+                    Mobile Recharge Billing System
+                </h3>
+
+                <p>
+                    Developed a Python-based billing system
+                    to manage mobile recharge plans and
+                    generate bills with automated GST calculation.
+                </p>
+
+                <div class="project-points">
+
+                    <p>✓ Mobile number validation</p>
+
+                    <p>✓ SIM and recharge plan selection</p>
+
+                    <p>✓ GST calculation and bill generation</p>
+
+                </div>
+
+                <span class="status">
+                    Completed Project
+                </span>
+
+            </div>
+
+            <!-- QUIZ -->
+
+            <div class="project">
+
+                <span class="project-tag">
+                    Python
+                </span>
+
+                <h3>
+                    Python Quiz Application
+                </h3>
+
+                <p>
+                    Created a Python-based quiz application
+                    that allows users to answer questions and
+                    receive their final score based on their
+                    responses.
+                </p>
+
+                <div class="project-points">
+
+                    <p>✓ Interactive question and answer flow</p>
+
+                    <p>✓ Score calculation</p>
+
+                    <p>✓ Functions, conditions and loops</p>
+
+                </div>
+
+                <span class="status">
+                    Completed Project
+                </span>
+
+            </div>
+
+            <!-- POWER BI -->
+
+            <div class="project">
+
+                <span class="project-tag">
+                    Power BI • Data Visualization
+                </span>
+
+                <h3>
+                    Power BI Data Analysis
+                </h3>
+
+                <p>
+                    Developed an interactive Power BI dashboard
+                    to analyze business data, identify trends
+                    and present important performance metrics.
+                </p>
+
+                <div class="project-points">
+
+                    <p>✓ Interactive dashboard development</p>
+
+                    <p>✓ Data visualization and reporting</p>
+
+                    <p>✓ Business trend and KPI analysis</p>
+
+                </div>
+
+                <span class="status">
+                    Completed Project
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education">
+
+            <h3>
+                Electronics and Communication Engineering
+            </h3>
+
+            <p>
+                SRM TRP Engineering College
+            </p>
+
+            <p>
+                Graduate
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            I am actively looking for opportunities in
+            Data Analytics, Data Science and related roles.
+        </p>
+
+        <br>
+
+        <p>
+            Email:
+            <a href="mailto:abirami25112004@gmail.com">
+                abirami25112004@gmail.com
+            </a>
+        </p>
+
+        <p>
+            LinkedIn:
+            <a
+                href="https://www.linkedin.com/in/abirami-murugan-8355b6323/"
+                target="_blank">
+                View my LinkedIn
+            </a>
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Abirami M | Data Analyst Portfolio
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
