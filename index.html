@@ -1,535 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Abirami M | Data Analyst Portfolio</title>
+    <title>Abirami M | Aspiring Data Analyst</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
             scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #1f2937;
-            background: #eef6ff;
-        }
-
-        header {
-            background: #172554;
-            color: white;
-            padding: 18px 7%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            color: #263238;
+            background: #f5f7fa;
         }
 
         nav {
+            background: #0f2747;
+            padding: 15px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         nav h2 {
-            font-size: 24px;
+            color: white;
+            font-size: 22px;
         }
 
         nav ul {
-            display: flex;
             list-style: none;
-            gap: 22px;
+            display: flex;
+            gap: 25px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 15px;
         }
 
         nav ul li a:hover {
-            color: #bfdbfe;
+            color: #64b5f6;
         }
-
-        section {
-            padding: 80px 7%;
-            scroll-margin-top: 80px;
-        }
-
-        section h2 {
-            text-align: center;
-            color: #172554;
-            margin-bottom: 40px;
-            font-size: 32px;
-        }
-
-        /* HERO */
 
         .hero {
-            min-height: 92vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #eef6ff, #ffffff);
-        }
-
-        .hero-content {
-            max-width: 850px;
+            background: #eaf2f8;
+            padding: 100px 8%;
             text-align: center;
-        }
-
-        .profile-placeholder {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 25px;
-            background: #dbeafe;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #172554;
-            font-size: 18px;
-            font-weight: bold;
-            border: 5px solid white;
-            box-shadow: 0 8px 25px rgba(23,37,84,0.15);
         }
 
         .hero h1 {
-            font-size: 50px;
-            color: #172554;
-            margin-bottom: 8px;
+            font-size: 45px;
+            color: #0f2747;
+            margin-bottom: 10px;
         }
 
         .hero h3 {
-            font-size: 25px;
-            color: #2563eb;
-            margin-bottom: 18px;
+            font-size: 24px;
+            color: #1976d2;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            max-width: 720px;
+            max-width: 750px;
             margin: auto;
-            color: #4b5563;
             font-size: 17px;
+            color: #455a64;
         }
 
         .buttons {
-            margin-top: 28px;
+            margin-top: 30px;
         }
 
-        .button {
+        .btn {
             display: inline-block;
-            margin: 7px;
-            padding: 13px 24px;
-            background: #172554;
-            color: white;
+            padding: 12px 24px;
+            margin: 5px;
+            border-radius: 6px;
             text-decoration: none;
-            border-radius: 7px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        .button:hover {
-            background: #2563eb;
+        .primary-btn {
+            background: #1976d2;
+            color: white;
         }
 
-        /* ABOUT */
+        .primary-btn:hover {
+            background: #0d47a1;
+        }
+
+        .secondary-btn {
+            background: white;
+            color: #1976d2;
+            border: 2px solid #1976d2;
+        }
+
+        .secondary-btn:hover {
+            background: #1976d2;
+            color: white;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #0f2747;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
 
         .about {
-            max-width: 850px;
+            max-width: 900px;
             margin: auto;
             text-align: center;
-            color: #4b5563;
             font-size: 17px;
         }
 
-        /* SKILLS */
-
-        .skills {
+        .skills-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            max-width: 950px;
+            gap: 12px;
+            max-width: 900px;
             margin: auto;
         }
 
         .skill {
             background: white;
-            padding: 14px 24px;
-            border-radius: 25px;
-            border: 1px solid #dbeafe;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            padding: 12px 20px;
+            border-radius: 6px;
+            border: 1px solid #d6dde5;
             font-weight: bold;
-            color: #172554;
+            color: #263238;
         }
 
-        /* WHAT I CAN DO */
-
-        .services {
+        .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
-            max-width: 1050px;
-            margin: auto;
-        }
-
-        .service {
-            background: white;
-            padding: 28px;
-            border-radius: 14px;
-            text-align: center;
-            border: 1px solid #dbeafe;
-            box-shadow: 0 5px 16px rgba(0,0,0,0.07);
-        }
-
-        .service h3 {
-            color: #172554;
-            margin-bottom: 10px;
-        }
-
-        .service p {
-            color: #6b7280;
-            font-size: 15px;
-        }
-
-        /* PROJECTS */
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: auto;
         }
 
-        .project {
-            background: white;
-            padding: 28px;
-            border-radius: 15px;
-            border: 1px solid #dbeafe;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .project:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.13);
-        }
-
-        .project-tag {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: bold;
-            color: #1d4ed8;
-            background: #eff6ff;
-            padding: 6px 11px;
-            border-radius: 20px;
-            margin-bottom: 14px;
-        }
-
-        .project h3 {
-            color: #172554;
-            margin-bottom: 12px;
-            font-size: 21px;
-        }
-
-        .project > p {
-            color: #555;
-            line-height: 1.7;
-        }
-
-        .project-points {
-            margin-top: 16px;
-            margin-bottom: 18px;
-        }
-
-        .project-points p {
-            font-size: 14px;
-            margin-bottom: 6px;
-            color: #444;
-        }
-
-        .status {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: bold;
-            color: #172554;
-            border: 1px solid #172554;
-            padding: 5px 10px;
-            border-radius: 20px;
-        }
-
-        /* INTERNSHIP */
-
-        .internship-card {
-            max-width: 850px;
-            margin: auto;
-            background: white;
-            padding: 32px;
-            border-radius: 15px;
-            border-left: 5px solid #2563eb;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-        }
-
-        .internship-card h3 {
-            color: #172554;
-            margin-bottom: 5px;
-        }
-
-        .internship-card .date {
-            color: #2563eb;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .internship-card p {
-            color: #555;
-        }
-
-        /* CURRENTLY LEARNING */
-
-        .learning {
-            background: #172554;
-            color: white;
-            text-align: center;
-        }
-
-        .learning h2 {
-            color: white;
-        }
-
-        .learning-box {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .learning-box h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .learning-box p {
-            color: #dbeafe;
-            font-size: 16px;
-        }
-
-        /* LEARNING */
-
-        .learning-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .learning-card {
+        .card {
             background: white;
             padding: 25px;
-            border-radius: 13px;
-            border: 1px solid #dbeafe;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
 
-        .learning-card h3 {
-            color: #172554;
-            margin-bottom: 8px;
+        .card h3 {
+            color: #0f2747;
+            margin-bottom: 10px;
         }
 
-        .learning-card p {
-            color: #666;
-            font-size: 14px;
+        .card p {
+            color: #546e7a;
         }
 
-        /* EDUCATION */
+        .card strong {
+            color: #1976d2;
+        }
 
-        .education {
-            text-align: center;
-            background: white;
-            max-width: 800px;
+        .info-box {
+            max-width: 900px;
             margin: auto;
+            background: white;
             padding: 30px;
-            border-radius: 13px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            border-radius: 10px;
+            border-left: 5px solid #1976d2;
         }
 
-        .education h3 {
-            color: #172554;
+        .info-box h3 {
+            color: #0f2747;
             margin-bottom: 8px;
         }
 
-        .education p {
-            color: #555;
+        .info-box p {
+            margin-bottom: 8px;
         }
-
-        /* CONTACT */
 
         .contact {
             text-align: center;
-            background: #172554;
-            color: white;
-        }
-
-        .contact h2 {
-            color: white;
         }
 
         .contact p {
-            margin: 8px 0;
+            margin: 10px 0;
         }
 
         .contact a {
-            color: #bfdbfe;
+            color: #1976d2;
             text-decoration: none;
-            font-weight: bold;
         }
 
-        /* FOOTER */
+        .contact a:hover {
+            text-decoration: underline;
+        }
 
         footer {
+            background: #0f2747;
+            color: white;
             text-align: center;
             padding: 20px;
-            background: #0f172a;
-            color: white;
-            font-size: 14px;
+            margin-top: 20px;
         }
 
-        /* MOBILE */
+        @media (max-width: 768px) {
 
-        @media (max-width: 700px) {
-
-            nav {
+            nav .nav-container {
                 flex-direction: column;
-                gap: 15px;
+                gap: 12px;
             }
 
             nav ul {
-                gap: 10px;
                 flex-wrap: wrap;
                 justify-content: center;
+                gap: 12px;
+            }
+
+            .hero {
+                padding: 70px 5%;
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 35px;
             }
 
             .hero h3 {
-                font-size: 21px;
-            }
-
-            .hero p {
-                font-size: 15px;
+                font-size: 20px;
             }
 
             section {
-                padding: 60px 6%;
+                padding: 50px 5%;
             }
 
-            section h2 {
-                font-size: 28px;
+            .cards {
+                grid-template-columns: 1fr;
             }
-
         }
-
     </style>
-
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-
-    <header>
-
-        <nav>
-
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
             <h2>Abirami M</h2>
 
             <ul>
-
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#internship">Internship</a></li>
-                <li><a href="#more">More</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
-
             </ul>
-
-        </nav>
-
-    </header>
+        </div>
+    </nav>
 
 
-    <!-- HOME -->
-
+    <!-- Home -->
     <section class="hero" id="home">
 
-        <div class="hero-content">
+        <h1>Hi, I'm Abirami M</h1>
 
-            <div class="profile-placeholder">
-                Profile Photo
-            </div>
+        <h3>Aspiring Data Analyst</h3>
 
-            <h1>Hi, I'm Abirami M</h1>
+        <p>
+            I am developing my skills in data analysis and enjoy working
+            with data to find useful insights and support data-driven
+            decision making.
+        </p>
 
-            <h3>Aspiring Data Analyst</h3>
+        <div class="buttons">
 
-            <p>
-                I am an aspiring Data Analyst with an interest in
-                Python, SQL, Excel, Power BI and Data Analytics.
-                I enjoy working with data, solving problems and
-                finding meaningful insights from datasets.
-            </p>
+            <a href="#projects" class="btn primary-btn">
+                View Projects
+            </a>
 
-            <div class="buttons">
+            <a href="resume.pdf" target="_blank" class="btn primary-btn">
+                View Resume
+            </a>
 
-                <a class="button" href="#projects">
-                    Explore My Projects
-                </a>
-
-            </div>
+            <a href="#contact" class="btn secondary-btn">
+                Contact Me
+            </a>
 
         </div>
 
     </section>
 
 
-    <!-- ABOUT -->
-
+    <!-- About -->
     <section id="about">
 
-        <h2>About Me</h2>
+        <h2 class="section-title">About Me</h2>
 
         <div class="about">
 
             <p>
-                I am an Electronics and Communication Engineering
-                graduate interested in building my career in
-                Data Analytics and Data Science.
-            </p>
-
-            <br>
-
-            <p>
-                I have developed practical skills in Python, SQL,
-                Excel and Power BI through hands-on learning and
-                projects. I enjoy analyzing data, identifying
-                patterns and presenting useful insights.
+                I am an Electronics and Communication Engineering graduate
+                with an interest in Data Analytics and Data Science.
+                I have developed practical skills in Python, SQL, Excel
+                and Power BI. I enjoy learning new technologies and
+                applying my knowledge through hands-on projects.
             </p>
 
         </div>
@@ -537,13 +331,12 @@
     </section>
 
 
-    <!-- SKILLS -->
-
+    <!-- Skills -->
     <section id="skills">
 
-        <h2>Technical Skills</h2>
+        <h2 class="section-title">Technical Skills</h2>
 
-        <div class="skills">
+        <div class="skills-container">
 
             <div class="skill">Python</div>
             <div class="skill">SQL</div>
@@ -559,56 +352,43 @@
     </section>
 
 
-    <!-- WHAT I CAN DO -->
+    <!-- What I Can Do -->
+    <section>
 
-    <section id="services">
+        <h2 class="section-title">What I Can Do</h2>
 
-        <h2>What I Can Do</h2>
+        <div class="cards">
 
-        <div class="services">
-
-            <div class="service">
-
-                <h3>Data Cleaning</h3>
-
-                <p>
-                    Clean and prepare datasets using
-                    Python, Pandas and Excel.
-                </p>
-
-            </div>
-
-            <div class="service">
-
+            <div class="card">
                 <h3>Data Analysis</h3>
-
                 <p>
-                    Analyze datasets to identify trends,
-                    patterns and useful insights.
+                    Analyze datasets using Python, SQL and Excel to
+                    identify patterns, trends and useful insights.
                 </p>
-
             </div>
 
-            <div class="service">
-
+            <div class="card">
                 <h3>Data Visualization</h3>
-
                 <p>
-                    Create meaningful dashboards and
-                    visual reports using Power BI.
+                    Create meaningful dashboards and visual reports
+                    using Power BI to present data clearly.
                 </p>
-
             </div>
 
-            <div class="service">
-
-                <h3>SQL Analysis</h3>
-
+            <div class="card">
+                <h3>Data Cleaning</h3>
                 <p>
-                    Query and analyze structured data
-                    using SQL and MySQL.
+                    Work with datasets to organize, clean and prepare
+                    data for analysis.
                 </p>
+            </div>
 
+            <div class="card">
+                <h3>Reporting</h3>
+                <p>
+                    Present analysis results through reports,
+                    visualizations and business-focused insights.
+                </p>
             </div>
 
         </div>
@@ -616,144 +396,81 @@
     </section>
 
 
-    <!-- PROJECTS -->
-
+    <!-- Projects -->
     <section id="projects">
 
-        <h2>Featured Projects</h2>
+        <h2 class="section-title">Featured Projects</h2>
 
-        <div class="projects">
+        <div class="cards">
 
+            <div class="card">
 
-            <!-- FOOD DELIVERY -->
-
-            <div class="project">
-
-                <span class="project-tag">
-                    Python • Pandas
-                </span>
-
-                <h3>
-                    Food Delivery Data Analysis
-                </h3>
+                <h3>Food Delivery Data Analysis</h3>
 
                 <p>
-                    An ongoing data analysis project using
-                    Python and Pandas to explore food delivery
-                    orders, delivery performance, ratings
-                    and order trends.
+                    <strong>Python | Pandas</strong>
                 </p>
 
-                <div class="project-points">
+                <p>
+                    Analyzing food delivery data to understand order
+                    trends, delivery patterns, ratings and other
+                    useful business insights using Python and Pandas.
+                </p>
 
-                    <p>✓ Data cleaning and preprocessing</p>
-                    <p>✓ Order and delivery trend analysis</p>
-                    <p>✓ Identifying meaningful data insights</p>
-
-                </div>
-
-                <span class="status">
-                    Currently in Progress
-                </span>
+                <p>
+                    <strong>Status:</strong> In Progress
+                </p>
 
             </div>
 
 
-            <!-- MOBILE RECHARGE -->
+            <div class="card">
 
-            <div class="project">
-
-                <span class="project-tag">
-                    Python • OOP
-                </span>
-
-                <h3>
-                    Mobile Recharge Billing System
-                </h3>
+                <h3>Mobile Recharge Billing System</h3>
 
                 <p>
-                    Developed a Python-based billing system
-                    to manage mobile recharge plans and
-                    generate bills with automated GST calculation.
+                    <strong>Python | OOP</strong>
                 </p>
 
-                <div class="project-points">
-
-                    <p>✓ Mobile number validation</p>
-                    <p>✓ SIM and recharge plan selection</p>
-                    <p>✓ GST calculation and bill generation</p>
-
-                </div>
-
-                <span class="status">
-                    Completed Project
-                </span>
+                <p>
+                    Developed a Python-based billing system with SIM
+                    selection, recharge plan management, GST calculation
+                    and bill generation.
+                </p>
 
             </div>
 
 
-            <!-- QUIZ -->
+            <div class="card">
 
-            <div class="project">
-
-                <span class="project-tag">
-                    Python
-                </span>
-
-                <h3>
-                    Python Quiz Application
-                </h3>
+                <h3>Python Quiz Application</h3>
 
                 <p>
-                    Created a Python-based quiz application
-                    that allows users to answer questions
-                    and receive their final score.
+                    <strong>Python</strong>
                 </p>
 
-                <div class="project-points">
-
-                    <p>✓ Interactive question flow</p>
-                    <p>✓ Score calculation</p>
-                    <p>✓ Functions, conditions and loops</p>
-
-                </div>
-
-                <span class="status">
-                    Completed Project
-                </span>
+                <p>
+                    Created a quiz application using Python with
+                    questions, answer validation, score calculation,
+                    functions, conditions and loops.
+                </p>
 
             </div>
 
 
-            <!-- POWER BI -->
+            <div class="card">
 
-            <div class="project">
-
-                <span class="project-tag">
-                    Power BI • Data Visualization
-                </span>
-
-                <h3>
-                    Power BI Data Analysis
-                </h3>
+                <h3>Power BI Data Analysis</h3>
 
                 <p>
-                    Developed an interactive Power BI dashboard
-                    to analyze business data, identify trends
-                    and present important performance metrics.
+                    <strong>Power BI | Data Visualization</strong>
                 </p>
 
-                <div class="project-points">
-
-                    <p>✓ Interactive dashboard development</p>
-                    <p>✓ Data visualization and reporting</p>
-                    <p>✓ Business trend and KPI analysis</p>
-
-                </div>
-
-                <span class="status">
-                    Completed Project
-                </span>
+                <p>
+                    Created an interactive Power BI dashboard to
+                    visualize business data, track key metrics,
+                    identify trends and present insights clearly.
+                </p>
 
             </div>
 
@@ -762,28 +479,26 @@
     </section>
 
 
-    <!-- INTERNSHIP -->
-
+    <!-- Internship -->
     <section id="internship">
 
-        <h2>Internship</h2>
+        <h2 class="section-title">Internship</h2>
 
-        <div class="internship-card">
+        <div class="info-box">
 
-            <h3>
-                VLSI Internship
-            </h3>
+            <h3>VLSI Internship</h3>
 
-            <p class="date">
-                Elysium Technologies Pvt. Ltd. |
+            <p>
+                <strong>Elysium Technologies Pvt. Ltd.</strong>
+            </p>
+
+            <p>
                 19 Aug 2024 – 02 Sep 2024
             </p>
 
             <p>
-                Completed a VLSI internship as part of
-                academic learning, gaining exposure to
-                VLSI concepts, semiconductor technologies
-                and practical technical learning.
+                Gained practical exposure to VLSI concepts and
+                semiconductor design during the internship.
             </p>
 
         </div>
@@ -791,22 +506,19 @@
     </section>
 
 
-    <!-- CURRENTLY LEARNING -->
+    <!-- Currently Learning -->
+    <section>
 
-    <section class="learning" id="learning">
+        <h2 class="section-title">Currently Learning</h2>
 
-        <h2>Currently Learning</h2>
+        <div class="info-box">
 
-        <div class="learning-box">
-
-            <h3>
-                Data Science with Generative AI
-            </h3>
+            <h3>Data Science & Generative AI</h3>
 
             <p>
                 Currently developing knowledge in Data Science,
-                Generative AI, data analysis and practical
-                data-driven problem solving.
+                Generative AI and related data-driven technologies
+                through practical learning.
             </p>
 
         </div>
@@ -814,81 +526,17 @@
     </section>
 
 
-    <!-- MORE -->
-
-    <section id="more">
-
-        <h2>Skills & Learning</h2>
-
-        <div class="learning-cards">
-
-
-            <div class="learning-card">
-
-                <h3>Python</h3>
-
-                <p>
-                    Programming fundamentals,
-                    functions, OOP and practical projects.
-                </p>
-
-            </div>
-
-
-            <div class="learning-card">
-
-                <h3>SQL</h3>
-
-                <p>
-                    SQL queries, data filtering,
-                    grouping, joins and analysis.
-                </p>
-
-            </div>
-
-
-            <div class="learning-card">
-
-                <h3>Power BI</h3>
-
-                <p>
-                    Dashboard creation, data visualization,
-                    KPIs and business reporting.
-                </p>
-
-            </div>
-
-
-            <div class="learning-card">
-
-                <h3>Generative AI</h3>
-
-                <p>
-                    Currently learning Generative AI
-                    concepts and practical applications.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-
+    <!-- Education -->
     <section id="education">
 
-        <h2>Education</h2>
+        <h2 class="section-title">Education</h2>
 
-        <div class="education">
+        <div class="info-box">
 
-            <h3>
-                Electronics and Communication Engineering
-            </h3>
+            <h3>Electronics and Communication Engineering</h3>
 
             <p>
-                SRM TRP Engineering College
+                <strong>SRM TRP Engineering College</strong>
             </p>
 
             <p>
@@ -900,57 +548,49 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- Contact -->
+    <section id="contact">
 
-    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
 
-        <h2>Let's Connect</h2>
+        <div class="contact">
 
-        <p>
-            I am actively looking for opportunities in
-            Data Analytics, Data Science and related roles.
-        </p>
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:abirami25112004@gmail.com">
+                    abirami25112004@gmail.com
+                </a>
+            </p>
 
-        <br>
+            <p>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/abirami-murugan-8355b6323/"
+                   target="_blank">
+                    LinkedIn Profile
+                </a>
+            </p>
 
-        <p>
-            Email:
-            <a href="mailto:abirami25112004@gmail.com">
-                abirami25112004@gmail.com
-            </a>
-        </p>
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Abirami-M-25"
+                   target="_blank">
+                    GitHub Profile
+                </a>
+            </p>
 
-        <p>
-            LinkedIn:
-            <a
-                href="https://www.linkedin.com/in/abirami-murugan-8355b6323/"
-                target="_blank">
-                View my LinkedIn
-            </a>
-        </p>
-
-        <p>
-            GitHub:
-            <a
-                href="https://github.com/Abirami-M-25"
-                target="_blank">
-                View my GitHub
-            </a>
-        </p>
+        </div>
 
     </section>
 
 
-    <!-- FOOTER -->
-
+    <!-- Footer -->
     <footer>
 
         <p>
-            © 2026 Abirami M | Data Analyst Portfolio
+            © 2026 Abirami M | Aspiring Data Analyst
         </p>
 
     </footer>
 
 </body>
-
 </html>
