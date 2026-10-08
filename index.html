@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Abirami M | Data Analyst Portfolio</title>
 
     <style>
@@ -15,15 +16,15 @@
 
         body {
             font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
             line-height: 1.6;
-            color: #222;
-            background: #f7f9fc;
         }
 
+        /* Navigation */
         header {
-            background: #172554;
-            color: white;
-            padding: 20px 8%;
+            background: #0f172a;
+            padding: 18px 8%;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -35,8 +36,10 @@
             align-items: center;
         }
 
-        nav h2 {
-            font-size: 24px;
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
         }
 
         nav ul {
@@ -52,82 +55,129 @@
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #38bdf8;
         }
 
+        /* Hero */
         .hero {
-            min-height: 90vh;
+            min-height: 88vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 60px 8%;
-            background: white;
+            background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .small-title {
+            color: #0284c7;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
         .hero h1 {
-            font-size: 48px;
-            color: #172554;
+            font-size: 52px;
+            color: #0f172a;
             margin-bottom: 10px;
         }
 
-        .hero h3 {
-            font-size: 25px;
+        .hero h2 {
+            font-size: 28px;
+            color: #0284c7;
             margin-bottom: 20px;
-            color: #444;
         }
 
         .hero p {
-            max-width: 700px;
+            font-size: 18px;
+            color: #475569;
+            max-width: 720px;
             margin: auto;
-            color: #555;
-            font-size: 17px;
+        }
+
+        .buttons {
+            margin-top: 30px;
         }
 
         .button {
             display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background: #172554;
-            color: white;
+            padding: 12px 24px;
+            margin: 5px;
+            border-radius: 7px;
             text-decoration: none;
-            border-radius: 6px;
+            font-weight: bold;
         }
 
+        .primary {
+            background: #0284c7;
+            color: white;
+        }
+
+        .secondary {
+            border: 2px solid #0284c7;
+            color: #0284c7;
+            background: white;
+        }
+
+        /* Sections */
         section {
-            padding: 70px 8%;
+            padding: 75px 8%;
         }
 
         section h2 {
             text-align: center;
-            color: #172554;
-            margin-bottom: 35px;
             font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 40px;
         }
 
+        /* About */
         .about {
             max-width: 850px;
             margin: auto;
             text-align: center;
-            color: #555;
+            color: #475569;
             font-size: 17px;
         }
 
+        .learning-box {
+            margin: 30px auto 0;
+            max-width: 700px;
+            padding: 20px;
+            background: white;
+            border-left: 5px solid #0284c7;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        /* Skills */
         .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 18px;
+            max-width: 900px;
+            margin: auto;
         }
 
         .skill {
             background: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 22px;
+            text-align: center;
+            border-radius: 10px;
             font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: 0.3s;
         }
 
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Projects */
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -136,52 +186,98 @@
 
         .project {
             background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-6px);
         }
 
         .project h3 {
-            color: #172554;
+            color: #0284c7;
             margin-bottom: 12px;
         }
 
         .project p {
-            color: #555;
+            color: #64748b;
         }
 
+        .tag {
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 5px;
+            padding: 5px 10px;
+            background: #e0f2fe;
+            color: #0369a1;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Education */
         .education {
-            text-align: center;
-            background: white;
-            max-width: 800px;
+            max-width: 700px;
             margin: auto;
-            padding: 25px;
-            border-radius: 10px;
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
         }
 
-        .contact {
+        .education h3 {
+            color: #0284c7;
+            margin-bottom: 8px;
+        }
+
+        /* Career */
+        .career {
+            background: #e0f2fe;
             text-align: center;
-            background: #172554;
+        }
+
+        .career p {
+            max-width: 750px;
+            margin: auto;
+            color: #475569;
+            font-size: 17px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #0f172a;
             color: white;
+            text-align: center;
         }
 
         .contact h2 {
             color: white;
         }
 
+        .contact p {
+            margin: 10px;
+        }
+
         .contact a {
-            color: white;
+            color: #38bdf8;
             text-decoration: none;
         }
 
+        /* Footer */
         footer {
+            background: #020617;
+            color: #94a3b8;
             text-align: center;
             padding: 20px;
-            background: #0f172a;
-            color: white;
+            font-size: 14px;
         }
 
+        /* Mobile */
         @media (max-width: 700px) {
+
             nav {
                 flex-direction: column;
                 gap: 15px;
@@ -194,11 +290,15 @@
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 38px;
             }
 
-            .hero h3 {
-                font-size: 21px;
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .hero p {
+                font-size: 16px;
             }
         }
     </style>
@@ -206,9 +306,10 @@
 
 <body>
 
+    <!-- Navigation -->
     <header>
         <nav>
-            <h2>Abirami M</h2>
+            <div class="logo">Abirami M</div>
 
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -222,119 +323,178 @@
     </header>
 
 
+    <!-- Home -->
     <section class="hero" id="home">
-        <div>
+        <div class="hero-content">
+
+            <div class="small-title">WELCOME TO MY PORTFOLIO</div>
+
             <h1>Hi, I'm Abirami M</h1>
 
-            <h3>Aspiring Data Analyst</h3>
+            <h2>Aspiring Data Analyst</h2>
 
             <p>
-                I am an aspiring Data Analyst with an interest in Python, SQL,
-                Excel, Power BI and Data Analytics. I enjoy working with data,
-                solving problems and finding meaningful insights from datasets.
+                I enjoy working with data, solving problems and transforming
+                datasets into meaningful insights using Python, SQL, Excel
+                and Power BI.
             </p>
 
-            <a class="button" href="#projects">View My Projects</a>
+            <div class="buttons">
+                <a class="button primary" href="#projects">
+                    Explore My Projects
+                </a>
+
+                <a class="button secondary" href="#contact">
+                    Contact Me
+                </a>
+            </div>
+
         </div>
     </section>
 
 
+    <!-- About -->
     <section id="about">
+
         <h2>About Me</h2>
 
         <div class="about">
+
             <p>
                 I am an Electronics and Communication Engineering graduate
-                interested in building my career in Data Analytics and Data Science.
-                I have developed practical skills in Python, SQL, Excel and Power BI
-                through hands-on learning and projects.
+                interested in building my career in Data Analytics and
+                Data Science. I have developed practical skills through
+                hands-on learning and projects.
             </p>
 
-            <br>
+            <div class="learning-box">
 
-            <p>
-                I am currently developing my knowledge in Data Science and
-                Generative AI and looking for opportunities where I can apply
-                my analytical and problem-solving skills.
-            </p>
+                <strong>Currently Learning</strong>
+
+                <p>
+                    Data Science and Generative AI, while continuing to
+                    strengthen my knowledge of data analysis, Python and
+                    visualization.
+                </p>
+
+            </div>
+
         </div>
+
     </section>
 
 
+    <!-- Skills -->
     <section id="skills">
-        <h2>Skills</h2>
+
+        <h2>Technical Skills</h2>
 
         <div class="skills">
+
             <div class="skill">Python</div>
+
             <div class="skill">SQL</div>
+
             <div class="skill">Excel</div>
+
             <div class="skill">Power BI</div>
+
             <div class="skill">Pandas</div>
-            <div class="skill">Data Analysis</div>
-            <div class="skill">Data Visualization</div>
+
             <div class="skill">MySQL</div>
+
+            <div class="skill">Data Analysis</div>
+
+            <div class="skill">Data Visualization</div>
+
         </div>
+
     </section>
 
 
+    <!-- Projects -->
     <section id="projects">
-        <h2>Projects</h2>
+
+        <h2>Featured Projects</h2>
 
         <div class="projects">
 
             <div class="project">
+
                 <h3>Food Delivery Data Analysis</h3>
 
                 <p>
-                    Analyzed food delivery data using Python and Pandas to
-                    identify order trends, delivery patterns and business
-                    insights. Worked with data cleaning, analysis and
-                    visualization to understand delivery performance.
+                    Working with food delivery data using Python and Pandas
+                    to explore order trends, delivery patterns and useful
+                    business insights through data analysis.
                 </p>
+
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Data Analysis</span>
+
             </div>
 
 
             <div class="project">
+
                 <h3>Mobile Recharge Billing System</h3>
 
                 <p>
-                    Developed a Python-based recharge billing system using
-                    Object-Oriented Programming. The project includes mobile
-                    number validation, SIM selection, recharge plan selection,
-                    GST calculation and automated bill generation.
+                    Developed a Python-based billing application using
+                    Object-Oriented Programming with SIM selection,
+                    recharge plans, GST calculation and bill generation.
                 </p>
+
+                <span class="tag">Python</span>
+                <span class="tag">OOP</span>
+
             </div>
 
 
             <div class="project">
+
                 <h3>Python Quiz Application</h3>
 
                 <p>
-                    Created a simple Python-based quiz application to practice
-                    programming concepts such as variables, conditions,
-                    loops, functions and user input.
+                    Created a Python quiz application to practice programming
+                    concepts including conditions, loops, functions and
+                    user input.
                 </p>
+
+                <span class="tag">Python</span>
+                <span class="tag">Programming</span>
+
             </div>
 
 
             <div class="project">
+
                 <h3>Power BI Data Analysis</h3>
 
                 <p>
-                    Developed an interactive Power BI dashboard using a
-                    business dataset to analyze important metrics, trends
-                    and performance indicators through data visualization.
+                    Created an interactive Power BI dashboard to analyze
+                    business data, identify trends and present important
+                    performance metrics through visualizations.
                 </p>
+
+                <span class="tag">Power BI</span>
+                <span class="tag">Data Visualization</span>
+
             </div>
 
         </div>
+
     </section>
 
 
+    <!-- Education -->
     <section id="education">
+
         <h2>Education</h2>
 
         <div class="education">
+
             <h3>Electronics and Communication Engineering</h3>
 
             <p>
@@ -344,19 +504,35 @@
             <p>
                 Graduate
             </p>
+
         </div>
+
     </section>
 
 
-    <section class="contact" id="contact">
-        <h2>Contact Me</h2>
+    <!-- Career -->
+    <section class="career">
+
+        <h2>Career Focus</h2>
 
         <p>
-            I am actively looking for opportunities in Data Analytics,
-            Data Science and related roles.
+            I am looking for opportunities where I can apply my analytical
+            skills, work with real-world data and continue developing my
+            knowledge in Data Analytics and Data Science.
         </p>
 
-        <br>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            Interested in Data Analytics, Data Science and
+            data-driven problem solving.
+        </p>
 
         <p>
             Email:
@@ -369,14 +545,27 @@
             LinkedIn:
             <a href="https://www.linkedin.com/in/abirami-murugan-8355b6323/"
                target="_blank">
-                View my LinkedIn
+                View My LinkedIn
             </a>
         </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/Abirami-M-25"
+               target="_blank">
+                View My GitHub
+            </a>
+        </p>
+
     </section>
 
 
     <footer>
-        <p>© 2026 Abirami M | Data Analyst Portfolio</p>
+
+        <p>
+            © 2026 Abirami M | Data Analyst Portfolio
+        </p>
+
     </footer>
 
 </body>
