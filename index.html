@@ -22,19 +22,18 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #222;
-            background: #f7f9fc;
+            color: #1f2937;
+            background: #eef6ff;
         }
-
-        /* NAVIGATION */
 
         header {
             background: #172554;
             color: white;
-            padding: 18px 8%;
+            padding: 18px 7%;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
         }
 
         nav {
@@ -50,76 +49,23 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 22px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 15px;
-            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
         }
 
         nav ul li a:hover {
-            color: #c7d2fe;
+            color: #bfdbfe;
         }
-
-        /* HOME */
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 60px 8%;
-            background: white;
-            scroll-margin-top: 90px;
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            color: #172554;
-            margin-bottom: 10px;
-        }
-
-        .hero h3 {
-            font-size: 26px;
-            color: #444;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            color: #555;
-            font-size: 17px;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 28px;
-            padding: 13px 27px;
-            background: #172554;
-            color: white;
-            text-decoration: none;
-            border-radius: 7px;
-            font-weight: bold;
-        }
-
-        .button:hover {
-            background: #263b80;
-        }
-
-        /* SECTIONS */
 
         section {
-            padding: 75px 8%;
-            scroll-margin-top: 90px;
+            padding: 80px 7%;
+            scroll-margin-top: 80px;
         }
 
         section h2 {
@@ -129,13 +75,82 @@
             font-size: 32px;
         }
 
+        /* HERO */
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #eef6ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            text-align: center;
+        }
+
+        .profile-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            background: #dbeafe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #172554;
+            font-size: 18px;
+            font-weight: bold;
+            border: 5px solid white;
+            box-shadow: 0 8px 25px rgba(23,37,84,0.15);
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            color: #172554;
+            margin-bottom: 8px;
+        }
+
+        .hero h3 {
+            font-size: 25px;
+            color: #2563eb;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #4b5563;
+            font-size: 17px;
+        }
+
+        .buttons {
+            margin-top: 28px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 7px;
+            padding: 13px 24px;
+            background: #172554;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #2563eb;
+        }
+
         /* ABOUT */
 
         .about {
             max-width: 850px;
             margin: auto;
             text-align: center;
-            color: #555;
+            color: #4b5563;
             font-size: 17px;
         }
 
@@ -146,18 +161,47 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
         }
 
         .skill {
             background: white;
-            padding: 13px 24px;
+            padding: 14px 24px;
             border-radius: 25px;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            border: 1px solid #dbeafe;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             font-weight: bold;
             color: #172554;
+        }
+
+        /* WHAT I CAN DO */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .service {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid #dbeafe;
+            box-shadow: 0 5px 16px rgba(0,0,0,0.07);
+        }
+
+        .service h3 {
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #6b7280;
+            font-size: 15px;
         }
 
         /* PROJECTS */
@@ -173,32 +217,31 @@
         .project {
             background: white;
             padding: 28px;
-            border-radius: 14px;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease;
+            border-radius: 15px;
+            border: 1px solid #dbeafe;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: 0.3s;
         }
 
         .project:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            transform: translateY(-7px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.13);
         }
 
         .project-tag {
             display: inline-block;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
-            color: #172554;
-            background: #eef2ff;
+            color: #1d4ed8;
+            background: #eff6ff;
             padding: 6px 11px;
             border-radius: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .project h3 {
             color: #172554;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             font-size: 21px;
         }
 
@@ -208,13 +251,13 @@
         }
 
         .project-points {
-            margin-top: 18px;
+            margin-top: 16px;
             margin-bottom: 18px;
         }
 
         .project-points p {
             font-size: 14px;
-            margin-bottom: 7px;
+            margin-bottom: 6px;
             color: #444;
         }
 
@@ -228,6 +271,89 @@
             border-radius: 20px;
         }
 
+        /* INTERNSHIP */
+
+        .internship-card {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 32px;
+            border-radius: 15px;
+            border-left: 5px solid #2563eb;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .internship-card h3 {
+            color: #172554;
+            margin-bottom: 5px;
+        }
+
+        .internship-card .date {
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .internship-card p {
+            color: #555;
+        }
+
+        /* CURRENTLY LEARNING */
+
+        .learning {
+            background: #172554;
+            color: white;
+            text-align: center;
+        }
+
+        .learning h2 {
+            color: white;
+        }
+
+        .learning-box {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .learning-box h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .learning-box p {
+            color: #dbeafe;
+            font-size: 16px;
+        }
+
+        /* LEARNING */
+
+        .learning-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .learning-card {
+            background: white;
+            padding: 25px;
+            border-radius: 13px;
+            border: 1px solid #dbeafe;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+
+        .learning-card h3 {
+            color: #172554;
+            margin-bottom: 8px;
+        }
+
+        .learning-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
         /* EDUCATION */
 
         .education {
@@ -236,7 +362,7 @@
             max-width: 800px;
             margin: auto;
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 13px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.07);
         }
 
@@ -266,13 +392,9 @@
         }
 
         .contact a {
-            color: white;
+            color: #bfdbfe;
             text-decoration: none;
             font-weight: bold;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
         }
 
         /* FOOTER */
@@ -295,7 +417,7 @@
             }
 
             nav ul {
-                gap: 12px;
+                gap: 10px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
@@ -313,15 +435,17 @@
             }
 
             section {
-                padding: 55px 6%;
+                padding: 60px 6%;
             }
 
             section h2 {
                 font-size: 28px;
             }
+
         }
 
     </style>
+
 </head>
 
 <body>
@@ -336,29 +460,13 @@
 
             <ul>
 
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#internship">Internship</a></li>
+                <li><a href="#more">More</a></li>
+                <li><a href="#contact">Contact</a></li>
 
             </ul>
 
@@ -366,11 +474,16 @@
 
     </header>
 
+
     <!-- HOME -->
 
     <section class="hero" id="home">
 
         <div class="hero-content">
+
+            <div class="profile-placeholder">
+                Profile Photo
+            </div>
 
             <h1>Hi, I'm Abirami M</h1>
 
@@ -383,13 +496,18 @@
                 finding meaningful insights from datasets.
             </p>
 
-            <a class="button" href="#projects">
-                Explore My Projects
-            </a>
+            <div class="buttons">
+
+                <a class="button" href="#projects">
+                    Explore My Projects
+                </a>
+
+            </div>
 
         </div>
 
     </section>
+
 
     <!-- ABOUT -->
 
@@ -410,20 +528,14 @@
             <p>
                 I have developed practical skills in Python, SQL,
                 Excel and Power BI through hands-on learning and
-                projects. I am currently developing my knowledge
-                in Data Science and Generative AI.
-            </p>
-
-            <br>
-
-            <p>
-                I enjoy analyzing data, learning new technologies
-                and using data-driven approaches to solve problems.
+                projects. I enjoy analyzing data, identifying
+                patterns and presenting useful insights.
             </p>
 
         </div>
 
     </section>
+
 
     <!-- SKILLS -->
 
@@ -446,6 +558,64 @@
 
     </section>
 
+
+    <!-- WHAT I CAN DO -->
+
+    <section id="services">
+
+        <h2>What I Can Do</h2>
+
+        <div class="services">
+
+            <div class="service">
+
+                <h3>Data Cleaning</h3>
+
+                <p>
+                    Clean and prepare datasets using
+                    Python, Pandas and Excel.
+                </p>
+
+            </div>
+
+            <div class="service">
+
+                <h3>Data Analysis</h3>
+
+                <p>
+                    Analyze datasets to identify trends,
+                    patterns and useful insights.
+                </p>
+
+            </div>
+
+            <div class="service">
+
+                <h3>Data Visualization</h3>
+
+                <p>
+                    Create meaningful dashboards and
+                    visual reports using Power BI.
+                </p>
+
+            </div>
+
+            <div class="service">
+
+                <h3>SQL Analysis</h3>
+
+                <p>
+                    Query and analyze structured data
+                    using SQL and MySQL.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
     <!-- PROJECTS -->
 
     <section id="projects">
@@ -453,6 +623,7 @@
         <h2>Featured Projects</h2>
 
         <div class="projects">
+
 
             <!-- FOOD DELIVERY -->
 
@@ -467,17 +638,16 @@
                 </h3>
 
                 <p>
-                    An ongoing data analysis project using Python
-                    and Pandas to explore food delivery orders,
-                    delivery performance, ratings and order trends.
+                    An ongoing data analysis project using
+                    Python and Pandas to explore food delivery
+                    orders, delivery performance, ratings
+                    and order trends.
                 </p>
 
                 <div class="project-points">
 
                     <p>✓ Data cleaning and preprocessing</p>
-
                     <p>✓ Order and delivery trend analysis</p>
-
                     <p>✓ Identifying meaningful data insights</p>
 
                 </div>
@@ -487,6 +657,7 @@
                 </span>
 
             </div>
+
 
             <!-- MOBILE RECHARGE -->
 
@@ -509,9 +680,7 @@
                 <div class="project-points">
 
                     <p>✓ Mobile number validation</p>
-
                     <p>✓ SIM and recharge plan selection</p>
-
                     <p>✓ GST calculation and bill generation</p>
 
                 </div>
@@ -521,6 +690,7 @@
                 </span>
 
             </div>
+
 
             <!-- QUIZ -->
 
@@ -536,17 +706,14 @@
 
                 <p>
                     Created a Python-based quiz application
-                    that allows users to answer questions and
-                    receive their final score based on their
-                    responses.
+                    that allows users to answer questions
+                    and receive their final score.
                 </p>
 
                 <div class="project-points">
 
-                    <p>✓ Interactive question and answer flow</p>
-
+                    <p>✓ Interactive question flow</p>
                     <p>✓ Score calculation</p>
-
                     <p>✓ Functions, conditions and loops</p>
 
                 </div>
@@ -556,6 +723,7 @@
                 </span>
 
             </div>
+
 
             <!-- POWER BI -->
 
@@ -578,9 +746,7 @@
                 <div class="project-points">
 
                     <p>✓ Interactive dashboard development</p>
-
                     <p>✓ Data visualization and reporting</p>
-
                     <p>✓ Business trend and KPI analysis</p>
 
                 </div>
@@ -594,6 +760,120 @@
         </div>
 
     </section>
+
+
+    <!-- INTERNSHIP -->
+
+    <section id="internship">
+
+        <h2>Internship</h2>
+
+        <div class="internship-card">
+
+            <h3>
+                VLSI Internship
+            </h3>
+
+            <p class="date">
+                Elysium Technologies Pvt. Ltd. |
+                19 Aug 2024 – 02 Sep 2024
+            </p>
+
+            <p>
+                Completed a VLSI internship as part of
+                academic learning, gaining exposure to
+                VLSI concepts, semiconductor technologies
+                and practical technical learning.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CURRENTLY LEARNING -->
+
+    <section class="learning" id="learning">
+
+        <h2>Currently Learning</h2>
+
+        <div class="learning-box">
+
+            <h3>
+                Data Science with Generative AI
+            </h3>
+
+            <p>
+                Currently developing knowledge in Data Science,
+                Generative AI, data analysis and practical
+                data-driven problem solving.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MORE -->
+
+    <section id="more">
+
+        <h2>Skills & Learning</h2>
+
+        <div class="learning-cards">
+
+
+            <div class="learning-card">
+
+                <h3>Python</h3>
+
+                <p>
+                    Programming fundamentals,
+                    functions, OOP and practical projects.
+                </p>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <h3>SQL</h3>
+
+                <p>
+                    SQL queries, data filtering,
+                    grouping, joins and analysis.
+                </p>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <h3>Power BI</h3>
+
+                <p>
+                    Dashboard creation, data visualization,
+                    KPIs and business reporting.
+                </p>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <h3>Generative AI</h3>
+
+                <p>
+                    Currently learning Generative AI
+                    concepts and practical applications.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
     <!-- EDUCATION -->
 
@@ -618,6 +898,7 @@
         </div>
 
     </section>
+
 
     <!-- CONTACT -->
 
@@ -648,7 +929,17 @@
             </a>
         </p>
 
+        <p>
+            GitHub:
+            <a
+                href="https://github.com/Abirami-M-25"
+                target="_blank">
+                View my GitHub
+            </a>
+        </p>
+
     </section>
+
 
     <!-- FOOTER -->
 
