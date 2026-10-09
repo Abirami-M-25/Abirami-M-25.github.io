@@ -1,596 +1,844 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#081426">
+<meta name="description" content="Abirami M's portfolio showcasing Data Analytics skills, certifications and academic projects.">
+<title>Abirami M | Data Analyst Portfolio</title>
 
-    <title>Abirami M | Aspiring Data Analyst</title>
+<style>
+:root {
+    --bg: #081426;
+    --surface: #101f35;
+    --surface2: #142941;
+    --text: #edf5ff;
+    --muted: #a9bdd1;
+    --accent: #42d6c5;
+    --blue: #65aaff;
+    --border: rgba(160,190,220,.17);
+    --shadow: 0 12px 35px rgba(0,0,0,.16);
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+body.light {
+    --bg: #f2f7fc;
+    --surface: #ffffff;
+    --surface2: #e6f0fa;
+    --text: #172c45;
+    --muted: #52677d;
+    --accent: #008e83;
+    --blue: #176bca;
+    --border: rgba(25,60,100,.15);
+    --shadow: 0 12px 35px rgba(20,50,80,.08);
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #263238;
-            background: #f5f7fa;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        nav {
-            background: #0f2747;
-            padding: 15px 8%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(ellipse at 10% 0%, rgba(36,125,180,.16), transparent 40%),
+        var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background .3s, color .3s;
+}
 
-        nav .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+a { color: var(--accent); }
 
-        nav h2 {
-            color: white;
-            font-size: 22px;
-        }
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-        }
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
 
-        nav ul li a:hover {
-            color: #64b5f6;
-        }
+.logo {
+    color: var(--text);
+    font-size: 23px;
+    font-weight: 800;
+    text-decoration: none;
+}
 
-        .hero {
-            background: #eaf2f8;
-            padding: 100px 8%;
-            text-align: center;
-        }
+.logo span { color: var(--accent); }
 
-        .hero h1 {
-            font-size: 45px;
-            color: #0f2747;
-            margin-bottom: 10px;
-        }
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        .hero h3 {
-            font-size: 24px;
-            color: #1976d2;
-            margin-bottom: 20px;
-        }
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+}
 
-        .hero p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 17px;
-            color: #455a64;
-        }
+nav a {
+    color: var(--muted);
+    font-size: 13px;
+    text-decoration: none;
+}
 
-        .buttons {
-            margin-top: 30px;
-        }
+nav a:hover { color: var(--accent); }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin: 5px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.theme-btn {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 9px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
-        .primary-btn {
-            background: #1976d2;
-            color: white;
-        }
+.hero {
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
+}
 
-        .primary-btn:hover {
-            background: #0d47a1;
-        }
+.eyebrow {
+    color: var(--accent);
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
 
-        .secondary-btn {
-            background: white;
-            color: #1976d2;
-            border: 2px solid #1976d2;
-        }
+.hero h1 {
+    font-size: clamp(38px, 7vw, 68px);
+    line-height: 1.15;
+    margin: 14px 0;
+    letter-spacing: -1.5px;
+}
 
-        .secondary-btn:hover {
-            background: #1976d2;
-            color: white;
-        }
+.gradient-text {
+    background: linear-gradient(90deg, var(--accent), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
-        section {
-            padding: 70px 8%;
-        }
+.role-line {
+    font-size: clamp(19px, 3vw, 27px);
+    font-weight: 600;
+    min-height: 45px;
+    margin-bottom: 18px;
+}
 
-        .section-title {
-            text-align: center;
-            color: #0f2747;
-            font-size: 30px;
-            margin-bottom: 35px;
-        }
+.cursor {
+    display: inline-block;
+    color: var(--accent);
+    animation: blink .8s steps(1) infinite;
+}
 
-        .about {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            font-size: 17px;
-        }
+@keyframes blink {
+    50% { opacity: 0; }
+}
 
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            max-width: 900px;
-            margin: auto;
-        }
+.hero p {
+    max-width: 690px;
+    color: var(--muted);
+    font-size: 17px;
+}
 
-        .skill {
-            background: white;
-            padding: 12px 20px;
-            border-radius: 6px;
-            border: 1px solid #d6dde5;
-            font-weight: bold;
-            color: #263238;
-        }
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 28px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid var(--accent);
+    transition: .25s;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-        }
+.btn.primary {
+    background: var(--accent);
+    color: #071b2a;
+}
 
-        .card h3 {
-            color: #0f2747;
-            margin-bottom: 10px;
-        }
+.btn.secondary {
+    color: var(--text);
+    background: transparent;
+}
 
-        .card p {
-            color: #546e7a;
-        }
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
 
-        .card strong {
-            color: #1976d2;
-        }
+section {
+    padding: 75px 0;
+    scroll-margin-top: 75px;
+}
 
-        .info-box {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            border-left: 5px solid #1976d2;
-        }
+.section-heading {
+    margin-bottom: 32px;
+}
 
-        .info-box h3 {
-            color: #0f2747;
-            margin-bottom: 8px;
-        }
+.section-heading .eyebrow { margin-bottom: 6px; }
 
-        .info-box p {
-            margin-bottom: 8px;
-        }
+.section-heading h2 {
+    font-size: clamp(27px, 4vw, 37px);
+    line-height: 1.3;
+}
 
-        .contact {
-            text-align: center;
-        }
+.section-heading p {
+    color: var(--muted);
+    margin-top: 8px;
+}
 
-        .contact p {
-            margin: 10px 0;
-        }
+.about-text {
+    max-width: 850px;
+    color: var(--muted);
+    font-size: 16px;
+}
 
-        .contact a {
-            color: #1976d2;
-            text-decoration: none;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
 
-        .contact a:hover {
-            text-decoration: underline;
-        }
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    transition: transform .25s, border-color .25s;
+}
 
-        footer {
-            background: #0f2747;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
 
-        @media (max-width: 768px) {
+.card h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
 
-            nav .nav-container {
-                flex-direction: column;
-                gap: 12px;
-            }
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+}
 
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
+.card .tech {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
 
-            .hero {
-                padding: 70px 5%;
-            }
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 20px;
+}
 
-            .hero h1 {
-                font-size: 35px;
-            }
+.tag {
+    padding: 7px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    font-size: 13px;
+    color: var(--text);
+}
 
-            .hero h3 {
-                font-size: 20px;
-            }
+.card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 18px;
+}
 
-            section {
-                padding: 50px 5%;
-            }
+.card-links a {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.card-links a:hover { text-decoration: underline; }
+
+.status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 4px 9px;
+    font-size: 11px;
+    border-radius: 6px;
+    background: var(--surface2);
+    color: var(--accent);
+}
+
+.timeline {
+    border-left: 2px solid var(--accent);
+    padding-left: 24px;
+    max-width: 850px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 26px;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    left: -30px;
+    top: 9px;
+}
+
+.timeline-item h3 { font-size: 18px; }
+
+.timeline-item p { color: var(--muted); }
+
+.timeline-item a {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, var(--surface), var(--surface2));
+    border: 1px solid var(--border);
+    padding: 28px;
+    border-radius: 15px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 25px 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.reveal {
+    animation: appear .65s ease both;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 800px) {
+    .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    nav { gap: 10px 14px; }
+
+    .grid { grid-template-columns: 1fr; }
+
+    .hero { min-height: auto; padding: 75px 0; }
+
+    section { padding: 55px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <h2>Abirami M</h2>
+<header>
+    <div class="container nav">
+        <a class="logo" href="#home">Abirami<span>.</span></a>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#internship">Internship</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="nav-right">
+            <nav aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#internship">Internship</a>
+                <a href="#certifications">Certificates</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="theme-btn" id="themeToggle"
+                    type="button" aria-label="Switch colour theme">
+                ☀️ / 🌙
+            </button>
         </div>
-    </nav>
+    </div>
+</header>
 
+<main>
 
-    <!-- Home -->
-    <section class="hero" id="home">
+<!-- HOME -->
+<section class="hero" id="home">
+    <div class="container reveal">
+        <div class="eyebrow">Welcome to my portfolio</div>
 
-        <h1>Hi, I'm Abirami M</h1>
+        <h1>Hi, I'm <span class="gradient-text">Abirami M</span></h1>
 
-        <h3>Aspiring Data Analyst</h3>
+        <div class="role-line">
+            I'm an <span class="gradient-text" id="typingRole">Data Analyst</span><span class="cursor">|</span>
+        </div>
 
         <p>
-            I am developing my skills in data analysis and enjoy working
-            with data to find useful insights and support data-driven
-            decision making.
+            An Electronics and Communication Engineering graduate
+            interested in Data Analytics, Python, SQL, Excel and Power BI.
+            I enjoy exploring data, identifying patterns and developing
+            practical projects while continuously improving my skills.
         </p>
 
-        <div class="buttons">
+        <div class="actions">
+            <a class="btn primary" href="#projects">Explore My Projects ↗</a>
+            <a class="btn secondary" href="resume.pdf" target="_blank"
+               rel="noopener">View Resume ↗</a>
+            <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
+    </div>
+</section>
 
-            <a href="#projects" class="btn primary-btn">
-                View Projects
-            </a>
-
-            <a href="resume.pdf" target="_blank" class="btn primary-btn">
-                View Resume
-            </a>
-
-            <a href="#contact" class="btn secondary-btn">
-                Contact Me
-            </a>
-
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">A little about me</div>
+            <h2>About Me</h2>
         </div>
 
-    </section>
+        <p class="about-text">
+            I am an Electronics and Communication Engineering graduate
+            from SRM TRP Engineering College with a strong interest in
+            Data Analytics and Data Science. I have learned Python, SQL,
+            Excel and Power BI and am developing my practical knowledge
+            through projects. My academic background has also introduced
+            me to electronics, sensors and embedded-system concepts.
+            I am looking for opportunities to apply my analytical and
+            technical skills, learn from real-world problems and grow
+            professionally.
+        </p>
+    </div>
+</section>
 
-
-    <!-- About -->
-    <section id="about">
-
-        <h2 class="section-title">About Me</h2>
-
-        <div class="about">
-
-            <p>
-                I am an Electronics and Communication Engineering graduate
-                with an interest in Data Analytics and Data Science.
-                I have developed practical skills in Python, SQL, Excel
-                and Power BI. I enjoy learning new technologies and
-                applying my knowledge through hands-on projects.
-            </p>
-
+<!-- SKILLS -->
+<section id="skills">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">Tools I work with</div>
+            <h2>Technical Skills</h2>
+            <p>Skills and technologies developed through learning and practice.</p>
         </div>
 
-    </section>
+        <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Data Cleaning</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Object-Oriented Programming</span>
+            <span class="tag">Electronics</span>
+            <span class="tag">Sensor Interfaces</span>
+        </div>
+    </div>
+</section>
 
-
-    <!-- Skills -->
-    <section id="skills">
-
-        <h2 class="section-title">Technical Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="skill">Python</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Excel</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Pandas</div>
-            <div class="skill">MySQL</div>
-            <div class="skill">Data Analysis</div>
-            <div class="skill">Data Visualization</div>
-
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">Things I've worked on</div>
+            <h2>Academic & Technical Projects</h2>
+            <p>Project descriptions reflect the purpose and scope of each project.</p>
         </div>
 
-    </section>
+        <div class="grid">
 
-
-    <!-- What I Can Do -->
-    <section>
-
-        <h2 class="section-title">What I Can Do</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Data Analysis</h3>
+            <article class="card">
+                <div class="tech">FINAL-YEAR ACADEMIC PROJECT · ELECTRONICS</div>
+                <h3>Dynamic Comparator-Based Sensor Interface for Smart Irrigation</h3>
                 <p>
-                    Analyze datasets using Python, SQL and Excel to
-                    identify patterns, trends and useful insights.
+                    An academic project focused on sensor interfacing
+                    for smart irrigation. The concept uses sensor inputs
+                    to monitor soil conditions and support irrigation
+                    control. The comparator-based interface is intended
+                    to help determine when irrigation is needed.
                 </p>
-            </div>
+                <div class="tags">
+                    <span class="tag">Comparator</span>
+                    <span class="tag">Sensor Interface</span>
+                    <span class="tag">Smart Irrigation</span>
+                    <span class="tag">Electronics</span>
+                </div>
+            </article>
 
-            <div class="card">
-                <h3>Data Visualization</h3>
+            <article class="card">
+                <div class="tech">MINI PROJECT · EMBEDDED SYSTEMS</div>
+                <h3>Railway Gate Controller</h3>
                 <p>
-                    Create meaningful dashboards and visual reports
-                    using Power BI to present data clearly.
+                    A mini project exploring an automatic railway gate
+                    control system. The design concept focuses on
+                    coordinating train detection with gate operation
+                    to help manage railway-crossing safety.
                 </p>
-            </div>
+                <div class="tags">
+                    <span class="tag">Automation</span>
+                    <span class="tag">Control System</span>
+                    <span class="tag">Electronics</span>
+                </div>
+            </article>
 
-            <div class="card">
-                <h3>Data Cleaning</h3>
-                <p>
-                    Work with datasets to organize, clean and prepare
-                    data for analysis.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Reporting</h3>
-                <p>
-                    Present analysis results through reports,
-                    visualizations and business-focused insights.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects">
-
-        <h2 class="section-title">Featured Projects</h2>
-
-        <div class="cards">
-
-            <div class="card">
-
+            <article class="card">
+                <div class="tech">PYTHON · PANDAS</div>
                 <h3>Food Delivery Data Analysis</h3>
-
                 <p>
-                    <strong>Python | Pandas</strong>
+                    An in-progress data analysis project exploring
+                    food orders, delivery time, preparation time,
+                    ratings and order values to identify patterns
+                    and useful business insights.
                 </p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Data Analysis</span>
+                </div>
+                <span class="status">In Progress</span>
+            </article>
 
-                <p>
-                    Analyzing food delivery data to understand order
-                    trends, delivery patterns, ratings and other
-                    useful business insights using Python and Pandas.
-                </p>
-
-                <p>
-                    <strong>Status:</strong> In Progress
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
+            <article class="card">
+                <div class="tech">PYTHON · OOP</div>
                 <h3>Mobile Recharge Billing System</h3>
-
                 <p>
-                    <strong>Python | OOP</strong>
+                    A Python application for selecting SIM operators
+                    and recharge plans, calculating GST and generating
+                    a final bill using structured program logic.
                 </p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">OOP</span>
+                    <span class="tag">Billing Logic</span>
+                </div>
+            </article>
 
-                <p>
-                    Developed a Python-based billing system with SIM
-                    selection, recharge plan management, GST calculation
-                    and bill generation.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
+            <article class="card">
+                <div class="tech">PYTHON</div>
                 <h3>Python Quiz Application</h3>
-
                 <p>
-                    <strong>Python</strong>
+                    A quiz application built to practise questions,
+                    answer checking and score calculation using
+                    Python functions, loops and conditional statements.
                 </p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Functions</span>
+                    <span class="tag">Conditions</span>
+                </div>
+            </article>
 
-                <p>
-                    Created a quiz application using Python with
-                    questions, answer validation, score calculation,
-                    functions, conditions and loops.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
+            <article class="card">
+                <div class="tech">POWER BI · DATA VISUALIZATION</div>
                 <h3>Power BI Data Analysis</h3>
-
                 <p>
-                    <strong>Power BI | Data Visualization</strong>
+                    A dashboard-based project for presenting key
+                    metrics and visualizing patterns in a business
+                    dataset. Update this description to match the
+                    exact dataset and dashboard you created.
                 </p>
-
-                <p>
-                    Created an interactive Power BI dashboard to
-                    visualize business data, track key metrics,
-                    identify trends and present insights clearly.
-                </p>
-
-            </div>
+                <div class="tags">
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Dashboard</span>
+                    <span class="tag">KPIs</span>
+                </div>
+            </article>
 
         </div>
+    </div>
+</section>
 
-    </section>
+<!-- INTERNSHIP -->
+<section id="internship">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">Practical exposure</div>
+            <h2>Internship</h2>
+        </div>
 
-
-    <!-- Internship -->
-    <section id="internship">
-
-        <h2 class="section-title">Internship</h2>
-
-        <div class="info-box">
-
+        <div class="card">
+            <div class="tech">19 AUG 2024 – 02 SEP 2024</div>
             <h3>VLSI Internship</h3>
-
+            <p><strong>Elysium Technologies Pvt. Ltd.</strong></p>
             <p>
-                <strong>Elysium Technologies Pvt. Ltd.</strong>
+                Gained exposure to VLSI concepts and semiconductor
+                design during an internship undertaken as part of
+                my engineering learning.
             </p>
+        </div>
+    </div>
+</section>
 
-            <p>
-                19 Aug 2024 – 02 Sep 2024
-            </p>
-
-            <p>
-                Gained practical exposure to VLSI concepts and
-                semiconductor design during the internship.
-            </p>
-
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">Learning & achievements</div>
+            <h2>Certifications</h2>
+            <p>Open each certificate using its View Certificate link.</p>
         </div>
 
-    </section>
+        <div class="grid">
 
+            <article class="card">
+                <h3>Python Certification</h3>
+                <p>Python programming and fundamental programming concepts.</p>
+                <div class="card-links">
+                    <a href="certificates/python-certificate.pdf"
+                       target="_blank" rel="noopener">📄 View Certificate ↗</a>
+                </div>
+            </article>
 
-    <!-- Currently Learning -->
-    <section>
+            <article class="card">
+                <h3>SQL Certification</h3>
+                <p>SQL queries and working with relational data.</p>
+                <div class="card-links">
+                    <a href="certificates/sql-certificate.pdf"
+                       target="_blank" rel="noopener">📄 View Certificate ↗</a>
+                </div>
+            </article>
 
-        <h2 class="section-title">Currently Learning</h2>
+            <article class="card">
+                <h3>Power BI Certification</h3>
+                <p>Data visualization and dashboard-related learning.</p>
+                <div class="card-links">
+                    <a href="certificates/powerbi-certificate.pdf"
+                       target="_blank" rel="noopener">📄 View Certificate ↗</a>
+                </div>
+            </article>
 
-        <div class="info-box">
+            <article class="card">
+                <h3>VLSI Internship Certificate</h3>
+                <p>Elysium Technologies Pvt. Ltd.</p>
+                <div class="card-links">
+                    <a href="certificates/vlsi-internship-certificate.pdf"
+                       target="_blank" rel="noopener">📄 View Certificate ↗</a>
+                </div>
+            </article>
 
+            <article class="card">
+                <h3>Generative AI Learning</h3>
+                <p>
+                    Add the exact certificate title and issuing
+                    organization from your certificate.
+                </p>
+                <div class="card-links">
+                    <a href="certificates/generative-ai-certificate.pdf"
+                       target="_blank" rel="noopener">📄 View Certificate ↗</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Additional Technical Certificates</h3>
+                <p>
+                    Add your other verified workshops, training
+                    certificates and technical achievements here.
+                </p>
+                <div class="card-links">
+                    <a href="#contact">Ask me about my learning</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- LEARNING -->
+<section id="learning">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">Growing every day</div>
+            <h2>Currently Learning</h2>
+        </div>
+
+        <div class="card">
             <h3>Data Science & Generative AI</h3>
-
             <p>
-                Currently developing knowledge in Data Science,
-                Generative AI and related data-driven technologies
-                through practical learning.
+                Currently developing my knowledge of Data Science
+                and Generative AI through structured learning
+                and practical exercises.
             </p>
+        </div>
+    </div>
+</section>
 
+<!-- EDUCATION -->
+<section id="education">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">Academic background</div>
+            <h2>Education</h2>
         </div>
 
-    </section>
-
-
-    <!-- Education -->
-    <section id="education">
-
-        <h2 class="section-title">Education</h2>
-
-        <div class="info-box">
-
+        <div class="card">
             <h3>Electronics and Communication Engineering</h3>
+            <p><strong>SRM TRP Engineering College</strong></p>
+            <p>Engineering Graduate</p>
+        </div>
+    </div>
+</section>
 
-            <p>
-                <strong>SRM TRP Engineering College</strong>
-            </p>
-
-            <p>
-                Graduate
-            </p>
-
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">Let's connect</div>
+            <h2>Contact Me</h2>
+            <p>I'm interested in opportunities to start and grow my career.</p>
         </div>
 
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-
-        <h2 class="section-title">Contact Me</h2>
-
-        <div class="contact">
-
+        <div class="contact-card">
             <p>
-                <strong>Email:</strong>
-                <a href="mailto:abirami25112004@gmail.com">
-                    abirami25112004@gmail.com
-                </a>
+                Feel free to connect with me about Data Analytics,
+                projects or suitable professional opportunities.
             </p>
 
-            <p>
-                <strong>LinkedIn:</strong>
+            <div class="contact-links">
+                <a href="mailto:abirami25112004@gmail.com">✉ Email</a>
+
                 <a href="https://www.linkedin.com/in/abirami-murugan-8355b6323/"
-                   target="_blank">
-                    LinkedIn Profile
-                </a>
-            </p>
+                   target="_blank" rel="noopener">LinkedIn ↗</a>
 
-            <p>
-                <strong>GitHub:</strong>
                 <a href="https://github.com/Abirami-M-25"
-                   target="_blank">
-                    GitHub Profile
+                   target="_blank" rel="noopener">GitHub ↗</a>
+
+                <a href="resume.pdf" target="_blank" rel="noopener">
+                    View Resume ↗
                 </a>
-            </p>
-
+            </div>
         </div>
+    </div>
+</section>
 
-    </section>
+</main>
 
+<footer>
+    <div class="container">
+        <p>© 2026 Abirami M · Data Analytics Portfolio</p>
+    </div>
+</footer>
 
-    <!-- Footer -->
-    <footer>
+<script>
+/* Typing animation */
+const roles = [
+    "Data Analyst",
+    "Python Programmer",
+    "Data Analytics Enthusiast"
+];
 
-        <p>
-            © 2026 Abirami M | Aspiring Data Analyst
-        </p>
+const roleElement = document.getElementById("typingRole");
+let roleIndex = 0;
+let charIndex = roles[0].length;
+let deleting = false;
 
-    </footer>
+function typeRole() {
+    const currentRole = roles[roleIndex];
+
+    if (deleting) {
+        charIndex--;
+    } else {
+        charIndex++;
+    }
+
+    roleElement.textContent = currentRole.substring(0, charIndex);
+
+    let delay = deleting ? 55 : 100;
+
+    if (!deleting && charIndex === currentRole.length) {
+        deleting = true;
+        delay = 1400;
+    } else if (deleting && charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        delay = 300;
+    }
+
+    setTimeout(typeRole, delay);
+}
+
+setTimeout(typeRole, 1200);
+
+/* Dark and light theme toggle */
+const themeButton = document.getElementById("themeToggle");
+
+themeButton.addEventListener("click", function () {
+    document.body.classList.toggle("light");
+
+    const lightMode = document.body.classList.contains("light");
+    themeButton.textContent = lightMode ? "🌙 Dark Mode" : "☀️ Light Mode";
+});
+</script>
 
 </body>
 </html>
